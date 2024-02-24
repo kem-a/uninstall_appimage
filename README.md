@@ -23,6 +23,7 @@ Exec=uninstall_appimage <desktop_file_name_without_extension>
 - **Simple Usage**: Just provide the name of the application as it appears in its `.desktop` filename (without the `.desktop` extension).
 - **Desktop Notification**: Offers feedback through desktop notifications, indicating success or failure of the uninstallation.
 - **Error Handling**: Includes basic error handling, such as failure to read the `.desktop` file or delete the AppImage and desktop file.
+- **Add Uninstall to all**: When run with option `--update` add `Uninstall Application` menu to all AppImage desktop files in user home directory.
 
 ## Dependencies
 
