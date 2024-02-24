@@ -1,6 +1,6 @@
 CC=gcc
-CFLAGS=$(shell pkg-config --cflags libnotify)
-LIBS=$(shell pkg-config --libs libnotify)
+CFLAGS=`pkg-config --cflags libnotify`
+LIBS=`pkg-config --libs libnotify`
 
-uninstall_appimage: main.c
-    $(CC) $(CFLAGS) -o uninstall_appimage main.c $(LIBS)
+uninstall_app: main.c
+	$(CC) $(CFLAGS) -o uninstall_app main.c $(LIBS)
