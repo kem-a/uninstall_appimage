@@ -30,8 +30,15 @@ Exec=uninstall_appimage <desktop_file_name_without_extension>
 
 Clone this repository and compile the project using GCC or any compatible C compiler. Ensure `libnotify` is installed on your system.
 
+1. Clone repository
 ```bash
-git clone https://github.com/kem-a/uninstall_appimage
-cd uninstall_appimage
-gcc -o uninstall_appimage main.c 'pkg-config --cflags --libs libnotify'
+git clone https://github.com/kem-a/uninstall_appimage && cd uninstall_appimage
+```
+2. Build and install
+```bash
+make && make install
+```
+3. Uninstall
+```bash
+make uninstall
 ```
