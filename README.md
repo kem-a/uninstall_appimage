@@ -1,6 +1,6 @@
 # AppImage Uninstaller
 
-This project provides a C-based command-line tool designed to uninstall AppImage applications on Linux systems. It leverages `.desktop` files to locate and remove both the application's executable and its desktop file, streamlining the uninstallation process.
+This project provides a C-based command-line tool designed to uninstall AppImage applications on Linux systems. It leverages `.desktop` files to locate and remove both the application's executable and its desktop file, streamlining the uninstallation process by adding 'Uninstall Application' menu to right click.
 This helper file works very well together with automated AppImage install scripts, that can automatically generate desktop file uninstall entry.
 
 ## Usage
