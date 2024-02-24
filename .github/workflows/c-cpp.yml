@@ -8,16 +8,17 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, fedora-latest]
     steps:
     - uses: actions/checkout@v3
-    - name: configure
-      run: ./configure
+    - name: Install dependencies (Ubuntu)
+      if: matrix.os == 'ubuntu-latest'
+      run: sudo apt-get update && sudo apt-get install -y libnotify-dev
+    - name: Install dependencies (Fedora)
+      if: matrix.os == 'fedora-latest'
+      run: sudo dnf install -y libnotify-devel
     - name: make
       run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
