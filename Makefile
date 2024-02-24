@@ -1,15 +1,16 @@
 CC=gcc
-CFLAGS=`pkg-config --cflags libnotify`
-LIBS=`pkg-config --libs libnotify`
+CFLAGS=$(shell pkg-config --cflags libnotify)
+LIBS=$(shell pkg-config --libs libnotify)
+PREFIX=$(HOME)/.local/bin
 
 uninstall_appimage: main.c
 	$(CC) $(CFLAGS) -o uninstall_appimage main.c $(LIBS)
 
-PREFIX=$(HOME)/.local/bin
-
 install:
-    @mkdir -p $(PREFIX)
-    @cp -p uninstall_appimage $(PREFIX)
+	@mkdir -p $(PREFIX)
+	@cp -p uninstall_appimage $(PREFIX)/uninstall_appimage
+	@echo "uninstall_appimage installed to $(PREFIX)"
 
 uninstall:
-    @rm -f $(PREFIX)/uninstall_appimage
+	@rm -f $(PREFIX)/uninstall_appimage
+	@echo "uninstall_appimage removed from $(PREFIX)"
