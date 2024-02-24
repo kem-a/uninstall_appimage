@@ -1,3 +1,5 @@
+<img src="https://github.com/kem-a/uninstall_appimage/blob/main/resources/example.png" alt="Logo" align="right" />
+
 # AppImage Uninstaller
 
 This project provides a C-based command-line tool designed to uninstall AppImage applications on Linux systems. It leverages `.desktop` files to locate and remove both the application's executable and its desktop file, streamlining the uninstallation process by adding 'Uninstall Application' menu to right click.
