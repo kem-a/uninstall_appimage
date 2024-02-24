@@ -29,7 +29,7 @@ Exec=uninstall_appimage <desktop_file_name_without_extension>
 
 - libnotify: For sending desktop notifications.
 
-## Installation
+## Build & Installation from Source
 
 Clone this repository and compile the project using GCC or any compatible C compiler. Ensure `libnotify` is installed on your system.
 
