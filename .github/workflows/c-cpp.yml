@@ -16,9 +16,9 @@ jobs:
     - uses: actions/checkout@v3
     - name: Install dependencies (Ubuntu)
       if: matrix.os == 'ubuntu-latest'
-      run: sudo apt-get update && sudo apt-get install -y libnotify-dev
+      run: sudo apt-get update && sudo apt-get install -y libnotify-dev libglib2.0-dev
     - name: Install dependencies (Fedora)
       if: matrix.os == 'fedora-latest'
-      run: sudo dnf install -y libnotify-devel
+      run: sudo dnf install -y libnotify-devel glib2-devel
     - name: make
       run: make
